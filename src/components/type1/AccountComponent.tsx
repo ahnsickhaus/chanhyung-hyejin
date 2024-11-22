@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { handleCopyAccount } from "../../lib/utils";
 
 const Container = styled.div`
   display: flex;
@@ -26,7 +27,7 @@ export default function AccountComponent({
         <Text>{account}</Text>
         <Text>{name}</Text>
       </div>
-      <Button>복사하기</Button>
+      <Button onClick={() => handleCopyAccount(account)}>복사하기</Button>
     </Container>
   );
 }

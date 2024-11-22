@@ -1,5 +1,3 @@
-import { Couple } from "../../types/couple";
-import { Parents } from "../../types/parents";
 import Section from "../common/Section";
 import Title from "../common/Title";
 import AccountComponent from "./AccountComponent";
