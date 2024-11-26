@@ -1,3 +1,4 @@
+import Map from "./Map";
 import { styled } from "styled-components";
 import Section from "../common/Section";
 import Title from "../common/Title";
@@ -21,8 +22,8 @@ export default function Location({
 }: Directions) {
   return (
     <Section>
-      <Title>LOCATION</Title>
-      {/* <Map latitude={37.38237} longitude={127.1014} /> */}
+      <Title>오시는 길</Title>
+      <Map latitude={37.38237} longitude={127.1014} />
       {
         car && (
           <div style={{  marginBottom: '20px' }}>

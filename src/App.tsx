@@ -9,6 +9,7 @@ import { Parents } from './types/parents';
 import { getParents } from './api/getParents';
 import { Directions } from './types/directions';
 import { getDirections } from './api/getDirections';
+import 'pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css'
 
 function App() {
   const path = "chanhyung-hyejin"

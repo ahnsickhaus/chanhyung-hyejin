@@ -1,8 +1,7 @@
 import { styled } from "styled-components";
 
 const Layout = styled.div`
-  margin-bottom: 60px;
-  padding: 0 20px;
+  padding: 0 20px 60px;
 `;
 
 export default function Section({ children }: { children: React.ReactNode }) {

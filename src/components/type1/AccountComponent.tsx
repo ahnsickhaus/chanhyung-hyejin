@@ -10,9 +10,16 @@ const Container = styled.div`
 
 const Text = styled.p`
   text-align: justify;
+  font-size: 15px;
 `;
 
-const Button = styled.button``;
+const Button = styled.button`
+  padding: 7px 20px;
+  background-color: #333333;
+  color: #ffffff;
+  border-radius: 25px;
+  font-size: 13px;
+`;
 
 export default function AccountComponent({
   name,
@@ -27,7 +34,7 @@ export default function AccountComponent({
         <Text>{account}</Text>
         <Text>{name}</Text>
       </div>
-      <Button onClick={() => handleCopyAccount(account)}>복사하기</Button>
+      <Button onClick={() => handleCopyAccount(account)}>계좌 복사</Button>
     </Container>
   );
 }

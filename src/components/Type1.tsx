@@ -11,6 +11,20 @@ import Phrase from "./type1/Phrase";
 import { Couple } from "../types/couple";
 import { Parents } from "../types/parents";
 import { Directions } from "../types/directions";
+import styled from "styled-components";
+
+const Type1Container = styled.div`
+  font-family: var(--font-pretendard);
+  font-size: 16px;
+  line-height: 1.8;
+  font-weight: 400;
+  background-color: #f7f0e7;
+
+  h2 {
+    font-size: 16px;
+    font-weight: 400;
+  }
+`;
 
 export default function Type1({
   applicationForm,
@@ -24,7 +38,7 @@ export default function Type1({
   directions: Directions;
 }) {
   return (
-    <>
+    <Type1Container>
       <IntroImage />
       <Phrase 
         phrase={applicationForm.phrase} 
@@ -68,6 +82,6 @@ export default function Type1({
       <Notice
         notice={applicationForm.notice}
       />
-    </>
+    </Type1Container>
   );
 }

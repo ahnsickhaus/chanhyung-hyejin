@@ -1,3 +1,4 @@
+import styled from "styled-components";
 import Section from "../common/Section";
 import Title from "../common/Title";
 import AccountComponent from "./AccountComponent";
@@ -17,6 +18,12 @@ interface CongratulatoryProps {
   brideMotherName?: string;
 }
 
+const SubTitle = styled.p`
+  text-align: justify;
+  border-bottom: 1px solid black;
+  font-weight: bold;
+`
+
 export default function Congratulatory({
   groomAccount,
   groomName,
@@ -33,12 +40,12 @@ export default function Congratulatory({
 }: CongratulatoryProps) {
   return (
     <Section>
-      <Title>CONGRATULATORY</Title>
+      <Title>마음 전하실 곳</Title>
       {/* 신랑측 */}
       {
         (groomAccount || groomFatherAccount || groomMotherAccount) && (
           <div>
-            <p style={{ textAlign: 'justify', borderBottom: '1px solid black' }}>신랑측 계좌번호</p>
+            <SubTitle>🩵 신랑측 계좌번호</SubTitle>
             {
               groomAccount && (
                 <AccountComponent
@@ -71,7 +78,7 @@ export default function Congratulatory({
       {
         (brideAccount || brideFatherAccount || brideMotherAccount) && (
           <div style={{ paddingTop: '30px' }}>
-            <p style={{ textAlign: 'justify', borderBottom: '1px solid black' }}>신부측 계좌번호</p>
+            <SubTitle>🩷 신부측 계좌번호</SubTitle>
             {
               (brideAccount && brideName) && (
                 <AccountComponent
