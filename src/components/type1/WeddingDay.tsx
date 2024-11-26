@@ -9,20 +9,14 @@ const Text = styled.p`
 export default function WeddingDay({
   eventDate,
   eventTime,
-  place,
-  address
 }: {
   eventDate: string,
-  eventTime: string,
-  place: string,
-  address: string
+  eventTime: string
 }) {
   return (
     <Section>
       <Title>WEDDING DAY</Title>
       <Text>{eventDate} {eventTime}</Text>
-      <Text>{place}</Text>
-      <Text>{address}</Text>
     </Section>
   );
 }

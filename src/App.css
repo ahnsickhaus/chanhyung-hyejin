@@ -5,6 +5,11 @@ html {
     'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
 }
 
+body {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
 html,
 body,
 p, 

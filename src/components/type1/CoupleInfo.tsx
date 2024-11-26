@@ -5,6 +5,12 @@ const Container = styled.div`
   text-align: center;
 `;
 
+const CoupleItem = styled.div`
+  &:first-child {
+    margin-bottom: 30px;
+  }
+`;
+
 export default function CoupleInfo({
   groomName,
   brideName,
@@ -23,12 +29,14 @@ export default function CoupleInfo({
   return (
     <Section>
       <Container>
-        <div>
-          <p>{groomFatherName}•{groomMotherName} 의 아들 {groomName}</p>
-        </div>
-        <div>
-          <p>{brideFatherName}•{brideMotherName} 의 딸 {brideName}</p>
-        </div>
+        <CoupleItem>
+          <p>{groomFatherName}•{groomMotherName} 의 아들</p>
+          <p>{groomName}</p>
+        </CoupleItem>
+        <CoupleItem>
+          <p>{brideFatherName}•{brideMotherName} 의 딸</p>
+          <p> {brideName}</p>
+        </CoupleItem>
       </Container>
     </Section>
   );

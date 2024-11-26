@@ -1,5 +1,5 @@
 import CoupleInfo from "./type1/CoupleInfo";
-import Gallery from "./type1/Gallery";
+import Gallery from "./type1/Exhibition";
 import IntroImage from "./type1/IntroImage";
 import MainImage from "./type1/MainImage";
 import WeddingDay from "./type1/WeddingDay";
@@ -18,11 +18,11 @@ const Type1Container = styled.div`
   font-size: 16px;
   line-height: 1.8;
   font-weight: 400;
-  background-color: #f7f0e7;
+  background-color: #e8e8de;
 
   h2 {
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 18px;
+    font-weight: bold;
   }
 `;
 
@@ -55,11 +55,11 @@ export default function Type1({
       <WeddingDay 
         eventDate={applicationForm.event_date}
         eventTime={applicationForm.event_time}
-        place={applicationForm.place}
-        address={applicationForm.address}
       />
       <Gallery />
       <Location 
+        place={applicationForm.place}
+        address={applicationForm.address}
         subway={directions.subway}
         bus={directions.bus}
         car={directions.car}

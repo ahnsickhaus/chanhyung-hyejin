@@ -4,6 +4,11 @@ import Section from "../common/Section";
 import Title from "../common/Title";
 import { Directions } from "../../types/directions";
 
+interface LocationProps {
+  place: string,
+  address: string
+}
+
 const Way = styled.p`
   text-align: justify;
   font-weight: bold;
@@ -12,17 +17,30 @@ const Way = styled.p`
 const Description = styled.p`
   text-align: justify;
   white-space: pre-line;
+  font-size: 15px;
+`;
+
+const LocationBox = styled.div`
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 15px;
 `;
 
 export default function Location({
+  place,
+  address,
   subway,
   bus,
   car,
   taxi
-}: Directions) {
+}: LocationProps & Directions) {
   return (
     <Section>
-      <Title>오시는 길</Title>
+      <Title>오시는 길</Title>  
+      <LocationBox>
+        <p>{address}</p>
+        <p>{place}</p>
+      </LocationBox>
       <Map latitude={37.38237} longitude={127.1014} />
       {
         car && (
