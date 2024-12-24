@@ -3,11 +3,12 @@ import Section from "../common/Section";
 
 const Container = styled.div`
   text-align: center;
+  padding-top: 60px;
 `;
 
 const CoupleItem = styled.div`
   &:first-child {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
 `;
 
@@ -27,15 +28,13 @@ export default function CoupleInfo({
   brideMotherName?: string,
 }) {
   return (
-    <Section>
+    <Section backgroundColor="#FDF7E8">
       <Container>
         <CoupleItem>
-          <p>{groomFatherName}•{groomMotherName} 의 아들</p>
-          <p>{groomName}</p>
+          <p>{groomFatherName}•{groomMotherName} 의 장남 <b>{groomName}</b></p>
         </CoupleItem>
         <CoupleItem>
-          <p>{brideFatherName}•{brideMotherName} 의 딸</p>
-          <p> {brideName}</p>
+          <p>{brideFatherName}•{brideMotherName} 의 장녀 <b>{brideName}</b></p>
         </CoupleItem>
       </Container>
     </Section>

@@ -18,7 +18,7 @@ const Type1Container = styled.div`
   font-size: 16px;
   line-height: 1.8;
   font-weight: 400;
-  background-color: #e8e8de;
+  background-color: #FFFFFF;
 
   h2 {
     font-size: 18px;
@@ -40,9 +40,6 @@ export default function Type1({
   return (
     <Type1Container>
       <IntroImage />
-      <Phrase 
-        phrase={applicationForm.phrase} 
-      />
       <MainImage />
       <CoupleInfo
         groomFatherName={parents.groom_father_name}
@@ -51,6 +48,9 @@ export default function Type1({
         brideFatherName={parents.bride_father_name}
         brideMotherName={parents.bride_mother_name}
         brideName={couple.bride_name}
+      />
+      <Phrase 
+        phrase={applicationForm.phrase} 
       />
       <WeddingDay 
         eventDate={applicationForm.event_date}

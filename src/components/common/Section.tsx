@@ -4,8 +4,8 @@ const Layout = styled.div`
   padding: 0 20px 60px;
 `;
 
-export default function Section({ children }: { children: React.ReactNode }) {
+export default function Section({ children, backgroundColor }: { children: React.ReactNode, backgroundColor?: string }) {
   return (
-    <Layout>{children}</Layout>
+    <Layout style={{ backgroundColor: backgroundColor }}>{children}</Layout>
   );
 }
