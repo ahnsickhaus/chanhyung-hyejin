@@ -10,20 +10,23 @@ interface LocationProps {
 }
 
 const Way = styled.p`
-  text-align: justify;
+  text-align: center;
   font-weight: bold;
+  font-size: 14px;
 `;
 
 const Description = styled.p`
-  text-align: justify;
+  text-align: center;
   white-space: pre-line;
-  font-size: 15px;
+  font-size: 12px;
 `;
 
 const LocationBox = styled.div`
   text-align: center;
   margin-bottom: 20px;
-  font-size: 15px;
+  font-size: 14px;
+  margin-top: 20px;
+  margin-bottom: 40px;
 `;
 
 export default function Location({
@@ -36,17 +39,21 @@ export default function Location({
 }: LocationProps & Directions) {
   return (
     <Section>
-      <Title>오시는 길</Title>  
-      <LocationBox>
-        <p>{address}</p>
-        <p>{place}</p>
-      </LocationBox>
+      <div style={{height: '60px'}}></div>
+      <div data-aos="fade-up" data-aos-duration="1000">
+        <Title>LOCATION</Title>   
+        <p style={{textAlign: 'center', fontSize: '12px'}}>오시는 길을 안내해드립니다.</p>
+        <LocationBox>
+          <p>{address}</p>
+          <p>{place}</p>
+        </LocationBox>
+      </div>
       <Map latitude={37.38237} longitude={127.1014} />
       {
         car && (
           <div style={{  marginBottom: '20px' }}>
             <Way>자가용</Way>
-            <Description style={{ textAlign: 'justify', whiteSpace: 'pre-line' }}>{car}</Description>
+            <Description style={{ whiteSpace: 'pre-line' }}>{car}</Description>
           </div>
         )
       }
@@ -54,7 +61,7 @@ export default function Location({
         subway && (
           <div style={{  marginBottom: '20px' }}>
             <Way>지하철</Way>
-            <Description style={{ textAlign: 'justify', whiteSpace: 'pre-line' }}>{subway}</Description>
+            <Description style={{ whiteSpace: 'pre-line' }}>{subway}</Description>
           </div>
         )
       }
@@ -62,7 +69,7 @@ export default function Location({
         bus && (
           <div style={{  marginBottom: '20px' }}>
             <Way>버스</Way>
-            <Description style={{ textAlign: 'justify', whiteSpace: 'pre-line' }}>{bus}</Description>
+            <Description style={{ whiteSpace: 'pre-line' }}>{bus}</Description>
           </div>
         )
       }
@@ -70,7 +77,7 @@ export default function Location({
         taxi && (
           <div style={{  marginBottom: '20px' }}>
             <Way>택시</Way>
-            <Description style={{ textAlign: 'justify', whiteSpace: 'pre-line' }}>{taxi}</Description>
+            <Description style={{ whiteSpace: 'pre-line' }}>{taxi}</Description>
           </div>
         )
       }

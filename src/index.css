@@ -1,1 +1,6 @@
-
+@font-face {
+  font-family: 'Voltaire Frangela';
+  src: url(./assets/fonts/Voltaire-Frangela.ttf) format('woff'),
+        url(./assets/fonts/Voltaire-Frangela.ttf) format('woff2');
+  font-weight: 400;
+}

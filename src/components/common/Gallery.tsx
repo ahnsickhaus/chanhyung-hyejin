@@ -24,7 +24,7 @@ const Gallery = ({ photos, targetRowHeight }: GalleryProps) => {
           onClick={({ index: current }) => setIndex(current)}
         />
         <Lightbox
-          render={{
+          render={{ 
             iconPrev: () => <GoChevronLeft size={32} />,
             iconNext: () => <GoChevronRight size={32} />,
             iconClose: () => <IoCloseOutline size={32} />,

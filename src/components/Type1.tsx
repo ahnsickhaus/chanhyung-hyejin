@@ -55,6 +55,8 @@ export default function Type1({
       <WeddingDay 
         eventDate={applicationForm.event_date}
         eventTime={applicationForm.event_time}
+        eventPlace={applicationForm.place}
+        eventAddress={applicationForm.address}
       />
       <Gallery />
       <Location 

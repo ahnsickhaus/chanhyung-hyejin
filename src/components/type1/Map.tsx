@@ -6,7 +6,7 @@ const MapContent = styled.div`
   height: 300px;
   border-radius: 4px;
   border: 1px solid #CCCCCC;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 `;
 
 const Map = ({

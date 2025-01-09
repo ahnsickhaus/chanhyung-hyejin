@@ -4,6 +4,8 @@ import Section from "../common/Section";
 const Container = styled.div`
   text-align: center;
   padding-top: 60px;
+  font-family: "Noto Sans KR", serif;
+  font-size: 14px;
 `;
 
 const CoupleItem = styled.div`
@@ -31,10 +33,10 @@ export default function CoupleInfo({
     <Section backgroundColor="#FDF7E8">
       <Container>
         <CoupleItem>
-          <p>{groomFatherName}•{groomMotherName} 의 장남 <b>{groomName}</b></p>
+          <p data-aos="fade-up" data-aos-duration="1000">{groomFatherName}<span style={{margin: '0 8px'}}>{groomMotherName}의</span>장남<b style={{marginLeft: '8px'}}>{groomName}</b></p>
         </CoupleItem>
         <CoupleItem>
-          <p>{brideFatherName}•{brideMotherName} 의 장녀 <b>{brideName}</b></p>
+          <p data-aos="fade-up" data-aos-duration="1000">{brideFatherName?.slice(0, 1)}<span style={{opacity: 0}}>주</span>{brideFatherName?.slice(1, 2)}<span style={{margin: '0 8px'}}>{brideMotherName}의</span>장녀<b style={{marginLeft: '8px'}}>{brideName}</b></p>
         </CoupleItem>
       </Container>
     </Section>

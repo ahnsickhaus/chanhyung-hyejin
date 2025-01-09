@@ -7,6 +7,8 @@ const Text = styled.p`
   white-space: pre-line;
   text-align: center;
   padding: 20px 0;
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 14px;
 `;
 
 const HeartIcon = styled.img`
@@ -27,7 +29,13 @@ export default function Phrase({
   return (
     <Section backgroundColor="#FDF7E8">
       <HeartIcon src={hyejinHeartUrl} />
-      <Text>{phrase}</Text>
+      <div data-aos="fade-up" data-aos-duration="1000">
+        <Text>
+          {phrase} 
+          <br />
+          <Text><b>요한계시록 19장 7절</b></Text>
+        </Text>
+      </div>
       <HeartIcon src={chanhyungHeartUrl} />
     </Section>
   );

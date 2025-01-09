@@ -22,6 +22,7 @@ const SubTitle = styled.p`
   text-align: justify;
   border-bottom: 1px solid black;
   font-weight: bold;
+  font-size: 14px;
 `
 
 export default function Congratulatory({
@@ -39,13 +40,17 @@ export default function Congratulatory({
   brideMotherName,
 }: CongratulatoryProps) {
   return (
-    <Section>
-      <Title>마음 전하실 곳</Title>
+    <Section backgroundColor="#FDF7E8">
+      <div style={{height: '60px'}}></div>
+      <div data-aos="fade-up" data-aos-duration="1000">
+        <Title>CONGRATULATORY</Title>
+        <p style={{textAlign: 'center', fontSize: '12px'}}>축하의 마음을 전해주세요</p>
+      </div>
       {/* 신랑측 */}
       {
         (groomAccount || groomFatherAccount || groomMotherAccount) && (
-          <div>
-            <SubTitle>🩵 신랑측 계좌번호</SubTitle>
+          <div style={{marginTop: '30px'}}>
+            <SubTitle>🤵🏻‍♂️ 신랑측</SubTitle>
             {
               groomAccount && (
                 <AccountComponent
@@ -78,7 +83,7 @@ export default function Congratulatory({
       {
         (brideAccount || brideFatherAccount || brideMotherAccount) && (
           <div style={{ paddingTop: '30px' }}>
-            <SubTitle>🩷 신부측 계좌번호</SubTitle>
+            <SubTitle>👰🏻‍♀️ 신부측</SubTitle>
             {
               (brideAccount && brideName) && (
                 <AccountComponent

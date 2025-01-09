@@ -10,7 +10,7 @@ const Container = styled.div`
 
 const Text = styled.p`
   text-align: justify;
-  font-size: 15px;
+  font-size: 14px;
 `;
 
 const Button = styled.button`
@@ -31,8 +31,8 @@ export default function AccountComponent({
   return(
     <Container>
       <div>
-        <Text>{account}</Text>
         <Text>{name}</Text>
+        <Text>{account}</Text>
       </div>
       <Button onClick={() => handleCopyAccount(account)}>계좌 복사</Button>
     </Container>
