@@ -7,7 +7,7 @@ const Text = styled.p`
   white-space: pre-line;
   text-align: center;
   padding: 20px 0;
-  font-family: "Nanum Myeongjo", serif;
+  font-family: "Noto Serif KR", serif;
   font-size: 14px;
 `;
 
