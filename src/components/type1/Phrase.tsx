@@ -29,7 +29,7 @@ export default function Phrase({
   return (
     <Section backgroundColor="#FDF7E8">
       <HeartIcon src={hyejinHeartUrl} />
-      <div data-aos="fade-up" data-aos-duration="1000">
+      <div>
         <Text>
           {phrase} 
           <br />

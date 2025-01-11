@@ -16,7 +16,7 @@ export default function Notice({
   return (
     <Section>
       <div style={{height: '60px'}}></div>
-      <div data-aos="fade-up" data-aos-duration="1000">
+      <div>
         <Title>NOTICE</Title>
         <Text>{notice}</Text>
       </div>

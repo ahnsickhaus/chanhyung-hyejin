@@ -10,9 +10,7 @@ import { getParents } from './api/getParents';
 import { Directions } from './types/directions';
 import { getDirections } from './api/getDirections';
 import 'pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css'
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { styled } from 'styled-components';
 import thumnailUrl from './assets/images/thumnail.jpg';
 
@@ -58,11 +56,7 @@ const WeddingCard = styled.div`
 `;
 
 function App() {
-  const path = "chanhyung-hyejin"
-  
-  useEffect(() => {
-    AOS.init();
-  }, [])
+  const path = "chanhyung-hyejin";
   
   const [isIntro, setIsIntro] = useState(true);
 

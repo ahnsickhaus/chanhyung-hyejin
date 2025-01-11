@@ -37,13 +37,13 @@ export default function WeddingDay({
   return (
     <Section>
       <div style={{height: '60px'}}></div>
-      <div data-aos="fade-up" data-aos-duration="1000">
+      <div>
         <Title>WEDDING DAY</Title>
         <Text><b>{eventDate} {eventTime}</b></Text>
         <Text>{eventPlace}</Text>
         <Text>{eventAddress}</Text>
       </div>
-      <div data-aos="fade-up" data-aos-duration="1000">
+      <div>
         <CalendarTitle>3 MARCH</CalendarTitle>
         <Calendar src={calendarUrl} />
       </div>
