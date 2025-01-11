@@ -16,20 +16,29 @@ import { useEffect, useState } from 'react';
 import { styled } from 'styled-components';
 import thumnailUrl from './assets/images/thumnail.jpg';
 
-interface IntroProps {
-  $isVisible: boolean;
+interface ContainerProps {
+  isIntro: boolean;
 }
-interface WeedingCardProps {
-  $isVisible: boolean;
+interface IntroProps {
+  isIntro: boolean;
 }
 
+const Container = styled.div<ContainerProps>`
+  width: 100dvw;
+  height: ${props => props.isIntro ? '100dvh' : 'auto'};
+  overflow-y: ${props => props.isIntro ? 'hidden' : 'auto'};
+  position: relative;
+`;
+
 const Intro = styled.div<IntroProps>`
-  opacity: ${props => props.$isVisible ? 1 : 0};
-  visibility: ${props => props.$isVisible ? 'visible' : 'hidden'};
-  transition: opacity 0.8s ease-out, visibility 0.8s ease-out;
-  position: fixed;
-  top: 0;
-  left: 0;
+  width: 100dvw;
+  height: 100dvh;
+  overflow-y: hidden;
+  position: relative;
+  z-index: 1;
+  opacity: ${props => props.isIntro ? 1 : 0};
+  visibility: ${props => props.isIntro ? 'visible' : 'hidden'};
+  transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
 `;
 
 const OPEN = styled.div`
@@ -43,19 +52,17 @@ const OPEN = styled.div`
   border: 1px solid #fff;
   font-weight: bold;
 `;
-const WeddingCard = styled.div<WeedingCardProps>`
-  opacity: ${props => props.$isVisible ? 1 : 0};
-  transition: opacity 0.5s ease-in;
-  transition-delay: 0.5s;
+const WeddingCard = styled.div`
+  position: absolute;
+  top: 0;
 `;
 
 function App() {
   const path = "chanhyung-hyejin"
-
   
   useEffect(() => {
     AOS.init();
-  },[])
+  }, [])
   
   const [isIntro, setIsIntro] = useState(true);
 
@@ -87,43 +94,38 @@ function App() {
   });
 
   return (
-    <div>
-      <Intro $isVisible={isIntro}>
-        <img style={{width: '100dvw', height: '100dvh'}} src={thumnailUrl} />
+    <Container isIntro={isIntro}>
+      <Intro isIntro={isIntro}>
+        <img style={{width: '100%', height: '100%'}} src={thumnailUrl} alt='mainImage' />
         <OPEN onClick={() => {
           setIsIntro(false);
         }}>
           OPEN 💌
         </OPEN>
       </Intro>
-
-    {
-      !isIntro && (
-        <WeddingCard $isVisible={!isIntro}>
-          {
-            (applicationFormIsLoading || coupleIsLoading || parentsIsLoading || directionsIsLoading) && (
-              <div>Loading...</div>
+      <WeddingCard>
+        {
+          (applicationFormIsLoading || coupleIsLoading || parentsIsLoading || directionsIsLoading) && (
+            <div>Loading...</div>
+          )
+        }
+        {
+          (applicationForm && couple && parents && directions) && (
+            applicationForm[0].type === 1 && (
+              <Type1 
+                applicationForm={applicationForm[0]} 
+                couple={couple[0]}
+                parents={parents[0]}
+                directions={directions[0]}
+              />
             )
-          }
-          {
-            (applicationForm && couple && parents && directions) && (
-              applicationForm[0].type === 1 && (
-                <Type1 
-                  applicationForm={applicationForm[0]} 
-                  couple={couple[0]}
-                  parents={parents[0]}
-                  directions={directions[0]}
-                />
-              )
-              // applicationForm[0].type === 2 && (
-              //   <Type2 applicationForm={applicationForm[0]} />
-              // )
-            )
-          }
-        </WeddingCard>
-      )
-    }
-    </div>
+            // applicationForm[0].type === 2 && (
+            //   <Type2 applicationForm={applicationForm[0]} />
+            // )
+          )
+        }
+      </WeddingCard>
+    </Container>
   );
 }
 
