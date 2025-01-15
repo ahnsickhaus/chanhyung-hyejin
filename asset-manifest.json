@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/chanhyung-hyejin/static/css/main.2bc32cb9.css",
-    "main.js": "/chanhyung-hyejin/static/js/main.9bf0fa95.js",
+    "main.css": "/chanhyung-hyejin/static/css/main.8a719e5b.css",
+    "main.js": "/chanhyung-hyejin/static/js/main.55acfa8a.js",
     "static/js/952.8b4f3750.chunk.js": "/chanhyung-hyejin/static/js/952.8b4f3750.chunk.js",
     "static/js/453.d3247908.chunk.js": "/chanhyung-hyejin/static/js/453.d3247908.chunk.js",
     "static/media/thumnail.jpg": "/chanhyung-hyejin/static/media/thumnail.f1ea0105cbc57968b333.jpg",
@@ -25,8 +25,6 @@
     "static/media/1-146.jpg": "/chanhyung-hyejin/static/media/1-146.3679ff04a60e15d6ce9d.jpg",
     "static/media/1-50.jpg": "/chanhyung-hyejin/static/media/1-50.29f51b5b8d9d1cd0f778.jpg",
     "static/media/main.png": "/chanhyung-hyejin/static/media/main.75c3b8c93fc7086b5b6f.png",
-    "static/media/1-4.jpg": "/chanhyung-hyejin/static/media/1-4.0e745915830158b83acc.jpg",
-    "static/media/1-5.jpg": "/chanhyung-hyejin/static/media/1-5.94baa425c696a16eb0d5.jpg",
     "static/media/Voltaire-Frangela.ttf": "/chanhyung-hyejin/static/media/Voltaire-Frangela.daf27b57bde00d5a72e4.ttf",
     "static/media/intro.png": "/chanhyung-hyejin/static/media/intro.116e06f52982a9e1d62d.png",
     "static/media/PretendardVariable.subset.2.woff2": "/chanhyung-hyejin/static/media/PretendardVariable.subset.2.9667e13e5c71c8804d7b.woff2",
@@ -123,13 +121,13 @@
     "static/media/PretendardVariable.subset.64.woff2": "/chanhyung-hyejin/static/media/PretendardVariable.subset.64.655f98243e6df944eb9d.woff2",
     "static/media/PretendardVariable.subset.66.woff2": "/chanhyung-hyejin/static/media/PretendardVariable.subset.66.e62b83b62a94bc3aadd3.woff2",
     "index.html": "/chanhyung-hyejin/index.html",
-    "main.2bc32cb9.css.map": "/chanhyung-hyejin/static/css/main.2bc32cb9.css.map",
-    "main.9bf0fa95.js.map": "/chanhyung-hyejin/static/js/main.9bf0fa95.js.map",
+    "main.8a719e5b.css.map": "/chanhyung-hyejin/static/css/main.8a719e5b.css.map",
+    "main.55acfa8a.js.map": "/chanhyung-hyejin/static/js/main.55acfa8a.js.map",
     "952.8b4f3750.chunk.js.map": "/chanhyung-hyejin/static/js/952.8b4f3750.chunk.js.map",
     "453.d3247908.chunk.js.map": "/chanhyung-hyejin/static/js/453.d3247908.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2bc32cb9.css",
-    "static/js/main.9bf0fa95.js"
+    "static/css/main.8a719e5b.css",
+    "static/js/main.55acfa8a.js"
   ]
 }
