@@ -29,14 +29,19 @@ export default function CoupleInfo({
   brideFatherName?: string,
   brideMotherName?: string,
 }) {
+
   return (
     <Section backgroundColor="#FDF7E8">
       <Container>
         <CoupleItem>
-          <p data-aos="fade-up" data-aos-duration="1000">{groomFatherName}<span style={{margin: '0 8px'}}>{groomMotherName}의</span>장남<b style={{marginLeft: '8px'}}>{groomName}</b></p>
+          <p>{groomFatherName}<span style={{margin: '0 8px'}}>{groomMotherName}의</span>장남<b style={{marginLeft: '8px'}}>{groomName}</b></p>
         </CoupleItem>
         <CoupleItem>
-          <p data-aos="fade-up" data-aos-duration="1000">{brideFatherName?.slice(0, 1)}<span style={{opacity: 0}}>주</span>{brideFatherName?.slice(1, 2)}<span style={{margin: '0 8px'}}>{brideMotherName}의</span>장녀<b style={{marginLeft: '8px'}}>{brideName}</b></p>
+          {
+            brideFatherName && (
+              <p>{brideFatherName.slice(0, 1)}<span style={{opacity: 0}}>주</span>{brideFatherName.slice(1, 2)}<span style={{margin: '0 8px'}}>{brideMotherName}의</span>장녀<b style={{marginLeft: '8px'}}>{brideName}</b></p>
+            )
+          }
         </CoupleItem>
       </Container>
     </Section>

@@ -42,10 +42,8 @@ export default function Congratulatory({
   return (
     <Section backgroundColor="#FDF7E8">
       <div style={{height: '60px'}}></div>
-      <div data-aos="fade-up" data-aos-duration="1000">
-        <Title>CONGRATULATORY</Title>
-        <p style={{textAlign: 'center', fontSize: '12px'}}>축하의 마음을 전해주세요</p>
-      </div>
+      <Title>CONGRATULATORY</Title>
+      <p style={{textAlign: 'center', fontSize: '12px'}}>축하의 마음을 전해주세요</p>
       {/* 신랑측 */}
       {
         (groomAccount || groomFatherAccount || groomMotherAccount) && (

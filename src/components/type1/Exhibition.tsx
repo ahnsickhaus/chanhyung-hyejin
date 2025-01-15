@@ -20,8 +20,6 @@ import image17Url from '../../assets/images/1-146.jpg';
 import image18Url from '../../assets/images/1-132.jpg';
 import image19Url from '../../assets/images/1-115.jpg';
 import image20Url from '../../assets/images/1-117.jpg';
-import image21Url from '../../assets/images/1-4.jpg';
-import image22Url from '../../assets/images/1-5.jpg';
 
 export interface Photo {
   src: string;
@@ -36,10 +34,10 @@ const Container = styled.div`
 
 export default function Exhibition() {
   const photos: Photo[] = [
-    { src: image4Url, width: 400, height: 600 },
+    { src: image1Url, width: 400, height: 600 },
     { src: image5Url, width: 400, height: 600 },
     { src: image6Url, width: 400, height: 600 },
-    { src: image1Url, width: 400, height: 600 },
+    { src: image4Url, width: 400, height: 600 },
     { src: image2Url, width: 400, height: 600 },
     { src: image3Url, width: 400, height: 600 },
     { src: image7Url, width: 400, height: 600 },
@@ -55,8 +53,6 @@ export default function Exhibition() {
     { src: image18Url, width: 400, height: 600 },
     { src: image19Url, width: 400, height: 600 },
     { src: image20Url, width: 800, height: 600 },
-    { src: image21Url, width: 500, height: 600 },
-    { src: image22Url, width: 700, height: 600 },
   ];
 
   return (

@@ -14,28 +14,21 @@ import { useState } from 'react';
 import { styled } from 'styled-components';
 import thumnailUrl from './assets/images/thumnail.jpg';
 
-interface ContainerProps {
-  isIntro: boolean;
-}
-interface IntroProps {
-  isIntro: boolean;
-}
-
-const Container = styled.div<ContainerProps>`
+const Container = styled.div<{$isintro: string}>`
   width: 100dvw;
-  height: ${props => props.isIntro ? '100dvh' : 'auto'};
-  overflow-y: ${props => props.isIntro ? 'hidden' : 'auto'};
+  height: ${({ $isintro }) => ($isintro === 'true' ? '100dvh' : 'auto')};
+  overflow-y: ${({ $isintro }) => ($isintro === 'true' ? 'hidden' : 'auto')};
   position: relative;
 `;
 
-const Intro = styled.div<IntroProps>`
+const Intro = styled.div<{$isintro: string}>`
   width: 100dvw;
   height: 100dvh;
   overflow-y: hidden;
   position: relative;
   z-index: 1;
-  opacity: ${props => props.isIntro ? 1 : 0};
-  visibility: ${props => props.isIntro ? 'visible' : 'hidden'};
+  opacity: ${({ $isintro }) => ($isintro === 'true' ? 1 : 0)};
+  visibility: ${({ $isintro }) => ($isintro === 'true' ? 'visible' : 'hidden')};
   transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
 `;
 
@@ -88,8 +81,8 @@ function App() {
   });
 
   return (
-    <Container isIntro={isIntro}>
-      <Intro isIntro={isIntro}>
+    <Container $isintro={isIntro.toString()}>
+      <Intro $isintro={isIntro.toString()}>
         <img style={{width: '100%', height: '100%'}} src={thumnailUrl} alt='mainImage' />
         <OPEN onClick={() => {
           setIsIntro(false);

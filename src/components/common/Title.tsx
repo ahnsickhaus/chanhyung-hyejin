@@ -9,6 +9,7 @@ const TitleText = styled.h2`
 `;
 
 export default function Title({ children }: { children: React.ReactNode }) {
+
   return (
     <TitleText>
       {children}

@@ -18,31 +18,31 @@ const Map = ({
 }) => {
   const mapRef = useRef<HTMLDivElement | null>(null);
 
-  const initMap = () => {
-    const { naver } = window;
-    const location = new naver.maps.LatLng(latitude, longitude);
-
-    if (mapRef.current && naver) {
-      const mapOptions = {
-        center: location,
-        zoom: 17,
-      };
-
-      const mapInstance = new naver.maps.Map(mapRef.current, mapOptions);
-
-      const marker = new naver.maps.Marker({
-        position: location,
-        map: mapInstance,
-      });
-
-      naver.maps.Event.addListener(marker, "click", () => {
-        mapInstance?.setCenter(new naver.maps.LatLng(latitude, longitude));
-        mapInstance?.setZoom(17);
-      });
-    }
-  };
-
   useEffect(() => {
+    const initMap = () => {
+      const { naver } = window;
+      const location = new naver.maps.LatLng(latitude, longitude);
+  
+      if (mapRef.current && naver) {
+        const mapOptions = {
+          center: location,
+          zoom: 17,
+        };
+  
+        const mapInstance = new naver.maps.Map(mapRef.current, mapOptions);
+  
+        const marker = new naver.maps.Marker({
+          position: location,
+          map: mapInstance,
+        });
+  
+        naver.maps.Event.addListener(marker, "click", () => {
+          mapInstance.setCenter(new naver.maps.LatLng(latitude, longitude));
+          mapInstance.setZoom(17);
+        });
+      }
+    };
+    
     if (typeof window.naver !== "undefined") {
       initMap();
     } else {

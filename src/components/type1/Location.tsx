@@ -40,7 +40,7 @@ export default function Location({
   return (
     <Section>
       <div style={{height: '60px'}}></div>
-      <div data-aos="fade-up" data-aos-duration="1000">
+      <div>
         <Title>LOCATION</Title>   
         <p style={{textAlign: 'center', fontSize: '12px'}}>오시는 길을 안내해드립니다.</p>
         <LocationBox>
