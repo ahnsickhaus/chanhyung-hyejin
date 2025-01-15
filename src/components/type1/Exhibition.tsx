@@ -17,9 +17,7 @@ import image14Url from '../../assets/images/1-104.jpg';
 import image15Url from '../../assets/images/6.jpg';
 import image16Url from '../../assets/images/10.jpg';
 import image17Url from '../../assets/images/1-146.jpg';
-import image18Url from '../../assets/images/1-132.jpg';
 import image19Url from '../../assets/images/1-115.jpg';
-import image20Url from '../../assets/images/1-117.jpg';
 
 export interface Photo {
   src: string;
@@ -50,9 +48,7 @@ export default function Exhibition() {
     { src: image15Url, width: 400, height: 600 },
     { src: image16Url, width: 400, height: 600 },
     { src: image17Url, width: 800, height: 600 },
-    { src: image18Url, width: 400, height: 600 },
     { src: image19Url, width: 400, height: 600 },
-    { src: image20Url, width: 800, height: 600 },
   ];
 
   return (

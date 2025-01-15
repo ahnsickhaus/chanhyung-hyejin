@@ -6,6 +6,7 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-top: 20px;
+  padding: 0 8px;
 `;
 
 const Text = styled.p`
@@ -31,7 +32,7 @@ export default function AccountComponent({
   return(
     <Container>
       <div>
-        <Text>{name}</Text>
+        <Text><b>{name}</b></Text>
         <Text>{account}</Text>
       </div>
       <Button onClick={() => handleCopyAccount(account)}>계좌 복사</Button>
