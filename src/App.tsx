@@ -43,7 +43,9 @@ const OPEN = styled.div`
   border: 1px solid #fff;
   font-weight: bold;
 `;
-const WeddingCard = styled.div`
+const WeddingCard = styled.div<{$isintro: string}>`
+  opacity: ${({ $isintro }) => ($isintro === 'false' ? 1 : 0)};
+  visibility: ${({ $isintro }) => ($isintro === 'false' ? 'visible' : 'hidden')};
   position: absolute;
   top: 0;
 `;
@@ -90,7 +92,7 @@ function App() {
           OPEN 💌
         </OPEN>
       </Intro>
-      <WeddingCard>
+      <WeddingCard $isintro={isIntro.toString()}>
         {
           (applicationFormIsLoading || coupleIsLoading || parentsIsLoading || directionsIsLoading) && (
             <div>Loading...</div>
