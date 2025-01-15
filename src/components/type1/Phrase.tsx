@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Section from "../common/Section";
 import chanhyungHeartUrl from "../../assets/images/chanhyung_heart.png";
 import hyejinHeartUrl from "../../assets/images/hyejin_heart.png";
+import FadeInAnimation from "../common/FadeInAnimation";
 const Text = styled.p`
   white-space: pre-line;
   text-align: center;
@@ -29,10 +30,12 @@ export default function Phrase({
   return (
     <Section backgroundColor="#FDF7E8">
       <HeartIcon src={hyejinHeartUrl} />
-        <Text>
-          {phrase} 
-        </Text>
-        <Text><b>요한계시록 19장 7절</b></Text>
+        <FadeInAnimation>
+          <Text>
+            {phrase}
+          </Text>
+          <Text><b>요한계시록 19장 7절</b></Text>
+        </FadeInAnimation>
       <HeartIcon src={chanhyungHeartUrl} />
     </Section>
   );

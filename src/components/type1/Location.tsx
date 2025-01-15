@@ -3,6 +3,7 @@ import { styled } from "styled-components";
 import Section from "../common/Section";
 import Title from "../common/Title";
 import { Directions } from "../../types/directions";
+import FadeInAnimation from "../common/FadeInAnimation";
 
 interface LocationProps {
   place: string,
@@ -42,43 +43,55 @@ export default function Location({
       <div style={{height: '60px'}}></div>
       <div>
         <Title>LOCATION</Title>   
-        <p style={{textAlign: 'center', fontSize: '12px'}}>오시는 길을 안내해드립니다.</p>
-        <LocationBox>
-          <p>{address}</p>
-          <p>{place}</p>
-        </LocationBox>
+        <FadeInAnimation>
+          <p style={{textAlign: 'center', fontSize: '12px'}}>오시는 길을 안내해드립니다</p>
+        </FadeInAnimation>
+        <FadeInAnimation>
+          <LocationBox>
+            <p>{address}</p>
+            <p>{place}</p>
+          </LocationBox>
+        </FadeInAnimation>
       </div>
       <Map latitude={37.38237} longitude={127.1014} />
       {
         car && (
-          <div style={{  marginBottom: '20px' }}>
-            <Way>자가용</Way>
-            <Description style={{ whiteSpace: 'pre-line' }}>{car}</Description>
-          </div>
+          <FadeInAnimation>
+            <div style={{  marginBottom: '20px' }}>
+              <Way>자가용</Way>
+              <Description style={{ whiteSpace: 'pre-line' }}>{car}</Description>
+            </div>
+          </FadeInAnimation>
         )
       }
       {
         subway && (
-          <div style={{  marginBottom: '20px' }}>
-            <Way>지하철</Way>
-            <Description style={{ whiteSpace: 'pre-line' }}>{subway}</Description>
-          </div>
+          <FadeInAnimation>
+            <div style={{  marginBottom: '20px' }}>
+              <Way>지하철</Way>
+              <Description style={{ whiteSpace: 'pre-line' }}>{subway}</Description>
+            </div>
+          </FadeInAnimation>
         )
       }
       {
         bus && (
-          <div style={{  marginBottom: '20px' }}>
-            <Way>버스</Way>
-            <Description style={{ whiteSpace: 'pre-line' }}>{bus}</Description>
-          </div>
+          <FadeInAnimation>
+            <div style={{  marginBottom: '20px' }}>
+              <Way>버스</Way>
+              <Description style={{ whiteSpace: 'pre-line' }}>{bus}</Description>
+            </div>
+          </FadeInAnimation>
         )
       }
       {
         taxi && (
-          <div style={{  marginBottom: '20px' }}>
-            <Way>택시</Way>
-            <Description style={{ whiteSpace: 'pre-line' }}>{taxi}</Description>
-          </div>
+          <FadeInAnimation>
+            <div style={{  marginBottom: '20px' }}>
+              <Way>택시</Way>
+              <Description style={{ whiteSpace: 'pre-line' }}>{taxi}</Description>
+            </div>
+          </FadeInAnimation>
         )
       }
     </Section>

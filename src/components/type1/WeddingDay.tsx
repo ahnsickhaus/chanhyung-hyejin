@@ -2,6 +2,7 @@ import { styled } from "styled-components";
 import Title from "../common/Title";
 import Section from "../common/Section";
 import calendarUrl from "../../assets/images/calendar.png";
+import FadeInAnimation from "../common/FadeInAnimation";
 
 const Text = styled.p`
   text-align: center;
@@ -39,14 +40,16 @@ export default function WeddingDay({
       <div style={{height: '60px'}}></div>
       <div>
         <Title>WEDDING DAY</Title>
-        <Text><b>{eventDate} {eventTime}</b></Text>
-        <Text>{eventPlace}</Text>
-        <Text>{eventAddress}</Text>
+        <FadeInAnimation>
+          <Text><b>{eventDate} {eventTime}</b></Text>
+          <Text>{eventPlace}</Text>
+          <Text>{eventAddress}</Text>
+        </FadeInAnimation>
       </div>
-      <div>
+      <FadeInAnimation>
         <CalendarTitle>3 MARCH</CalendarTitle>
         <Calendar src={calendarUrl} />
-      </div>
+      </FadeInAnimation>
     </Section>
   );
 }

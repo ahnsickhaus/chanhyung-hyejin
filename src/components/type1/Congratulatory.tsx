@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Section from "../common/Section";
 import Title from "../common/Title";
 import AccountComponent from "./AccountComponent";
+import FadeInAnimation from "../common/FadeInAnimation";
 
 interface CongratulatoryProps {
   groomAccount?: string;
@@ -43,70 +44,76 @@ export default function Congratulatory({
     <Section backgroundColor="#FDF7E8">
       <div style={{height: '60px'}}></div>
       <Title>CONGRATULATORY</Title>
-      <p style={{textAlign: 'center', fontSize: '12px'}}>축하의 마음을 전해주세요</p>
+      <FadeInAnimation>
+        <p style={{textAlign: 'center', fontSize: '12px'}}>축하의 마음을 전해주세요</p>
+      </FadeInAnimation>
       {/* 신랑측 */}
       {
         (groomAccount || groomFatherAccount || groomMotherAccount) && (
-          <div style={{marginTop: '30px'}}>
-            <SubTitle>🤵🏻‍♂️ 신랑측</SubTitle>
-            {
-              groomAccount && (
-                <AccountComponent
-                  name={groomName}
-                  account={groomAccount}
-                />
-              )
-            }
-            {
-              (groomFatherAccount && groomFatherName) && (
-                <AccountComponent
-                  name={groomFatherName}
-                  account={groomFatherAccount}
-                />
-              )
-            }
-            {
-              (groomMotherAccount && groomMotherName) && (
-                <AccountComponent
-                  name={groomMotherName}
-                  account={groomMotherAccount}
-                />
-              )
-            }
-          </div>
+          <FadeInAnimation>
+            <div style={{marginTop: '30px'}}>
+              <SubTitle>🤵🏻‍♂️ 신랑측</SubTitle>
+              {
+                groomAccount && (
+                  <AccountComponent
+                    name={groomName}
+                    account={groomAccount}
+                  />
+                )
+              }
+              {
+                (groomFatherAccount && groomFatherName) && (
+                  <AccountComponent
+                    name={groomFatherName}
+                    account={groomFatherAccount}
+                  />
+                )
+              }
+              {
+                (groomMotherAccount && groomMotherName) && (
+                  <AccountComponent
+                    name={groomMotherName}
+                    account={groomMotherAccount}
+                  />
+                )
+              }
+            </div>
+          </FadeInAnimation>
         )
       }
       
       {/* 신부측 */}
       {
         (brideAccount || brideFatherAccount || brideMotherAccount) && (
-          <div style={{ paddingTop: '30px' }}>
-            <SubTitle>👰🏻‍♀️ 신부측</SubTitle>
-            {
-              (brideAccount && brideName) && (
-                <AccountComponent
-                  name={brideName}
-                  account={brideAccount}
-                />
-              )
-            }
-            {
-              (brideFatherAccount && brideFatherName) && (
-                <AccountComponent
-                  name={brideFatherName}
-                  account={brideFatherAccount}
-                />
-              )
-            }
-            {
-              (brideMotherAccount && brideMotherName) && (
-                <AccountComponent
-                  name={brideMotherName}
-                  account={brideMotherAccount}
-                />
-              )
-            }
-          </div>
+          <FadeInAnimation>
+            <div style={{ paddingTop: '30px' }}>
+              <SubTitle>👰🏻‍♀️ 신부측</SubTitle>
+              {
+                (brideAccount && brideName) && (
+                  <AccountComponent
+                    name={brideName}
+                    account={brideAccount}
+                  />
+                )
+              }
+              {
+                (brideFatherAccount && brideFatherName) && (
+                  <AccountComponent
+                    name={brideFatherName}
+                    account={brideFatherAccount}
+                  />
+                )
+              }
+              {
+                (brideMotherAccount && brideMotherName) && (
+                  <AccountComponent
+                    name={brideMotherName}
+                    account={brideMotherAccount}
+                  />
+                )
+              }
+            </div>
+          </FadeInAnimation>
         )
       }
     </Section>

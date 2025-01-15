@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
 import Title from "../common/Title";
 import Section from "../common/Section";
+import FadeInAnimation from "../common/FadeInAnimation";
 
 const Text = styled.p`
   white-space: pre-line;
@@ -16,10 +17,10 @@ export default function Notice({
   return (
     <Section>
       <div style={{height: '60px'}}></div>
-      <div>
+      <FadeInAnimation>
         <Title>NOTICE</Title>
         <Text>{notice}</Text>
-      </div>
+      </FadeInAnimation>
     </Section>
   );
 }

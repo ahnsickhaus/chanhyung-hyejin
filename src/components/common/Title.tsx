@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import FadeInAnimation from "./FadeInAnimation";
 
 const TitleText = styled.h2`
   margin-bottom: 10px;
@@ -11,8 +12,10 @@ const TitleText = styled.h2`
 export default function Title({ children }: { children: React.ReactNode }) {
 
   return (
-    <TitleText>
-      {children}
-    </TitleText>
+    <FadeInAnimation>
+      <TitleText>
+        {children}
+      </TitleText>
+    </FadeInAnimation>
   );
 }
