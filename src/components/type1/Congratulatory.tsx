@@ -24,6 +24,7 @@ const SubTitle = styled.p`
   border-bottom: 1px solid black;
   font-weight: bold;
   font-size: 14px;
+  padding-bottom: 4px;
 `
 
 export default function Congratulatory({

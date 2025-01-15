@@ -74,10 +74,10 @@ export default function Type1({
         brideMotherName={parents.bride_mother_name}
         groomName={couple.groom_name}
         brideName={couple.bride_name}
-        groomAccount={parents.groom_father_account}
+        groomAccount={couple.groom_account}
         groomFatherAccount={parents.groom_father_account}
         groomMotherAccount={parents.groom_mother_account}
-        brideAccount={parents.bride_father_account}
+        brideAccount={couple.bride_account}
         brideFatherAccount={parents.bride_father_account}
         brideMotherAccount={parents.bride_mother_account}
       />
