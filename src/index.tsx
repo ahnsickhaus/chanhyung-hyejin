@@ -16,6 +16,7 @@ root.render(
     <BrowserRouter>
         <Routes>
           <Route path='/chanhyung-hyejin' element={<App />}></Route>
+          <Route path='/card' element={<Card />}></Route>
           <Route path='/chanhyung-hyejin/card' element={<Card />}></Route>
         </Routes>
     </BrowserRouter>
