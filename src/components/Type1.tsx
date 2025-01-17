@@ -14,7 +14,6 @@ import { Directions } from "../types/directions";
 import styled from "styled-components";
 
 const Type1Container = styled.div`
-  font-family: var(--font-pretendard);
   font-size: 16px;
   line-height: 1.8;
   font-weight: 400;

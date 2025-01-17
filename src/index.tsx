@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Card from './pages/Card';
 
 const queryClient = new QueryClient();
 
@@ -11,7 +13,12 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <QueryClientProvider client={queryClient}>
-    <App />
+    <BrowserRouter>
+        <Routes>
+          <Route path='/chanhyung-hyejin' element={<App />}></Route>
+          <Route path='/chanhyung-hyejin/card' element={<Card />}></Route>
+        </Routes>
+    </BrowserRouter>
   </QueryClientProvider>
 );
 
