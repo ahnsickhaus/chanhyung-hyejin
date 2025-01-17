@@ -14,6 +14,7 @@ interface GalleryProps {
 
 const Gallery = ({ photos, targetRowHeight }: GalleryProps) => {
   const [index, setIndex] = useState(-1);
+  const [isOpen, setIsOpen] = useState(false);
 
     return (
       <div>
@@ -21,7 +22,12 @@ const Gallery = ({ photos, targetRowHeight }: GalleryProps) => {
           layout="rows"
           photos={photos}
           targetRowHeight={targetRowHeight}
-          onClick={({ index: current }) => setIndex(current)}
+          onClick={
+            ({ index: current }) =>{ 
+              setIndex(current)
+              setIsOpen(true)
+            }
+          }
         />
         <Lightbox
           render={{ 
@@ -30,9 +36,9 @@ const Gallery = ({ photos, targetRowHeight }: GalleryProps) => {
             iconClose: () => <IoCloseOutline size={32} />,
           }}
           slides={photos}
-          open={index >= 0}
+          open={isOpen}
           index={index}
-          close={() => setIndex(-1)}
+          close={() => setIsOpen(false)}
           />
       </div>
     );

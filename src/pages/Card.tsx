@@ -30,9 +30,37 @@ const EndingImage = styled.img`
   width: 100%;
 `;
 
+const Share = styled.button`
+  margin: 0 auto 30px;
+  padding: 8px 30px;
+  font-size: 13px;
+  background-color: #333333;
+  color: #fff;
+  border-radius: 25px;
+  cursor: pointer;
+  display: block;
+`;
+
+declare global {
+  interface Window {
+    Kakao: any; // Kakao의 타입을 정확하게 알면, any 대신 적절한 타입을 사용합니다.
+  }
+}
+
 function App() {
   const path = "chanhyung-hyejin";
   const [isLoaded, setIsLoaded] = useState(false); // Fade-in 상태 관리
+
+  const shareKakao = () => {
+    if (window.Kakao) {
+      const kakao = window.Kakao;
+      kakao.Share.createCustomButton({
+        container: '#kakaotalk-sharing-btn',
+        templateId: 116393,
+      });
+    }
+    
+  }
 
   const { data: applicationForm, isLoading: applicationFormIsLoading } = useQuery<ApplicationForm[] | null>({
     queryKey: ["applicationForm", { path: path }],
@@ -73,6 +101,11 @@ function App() {
         setIsLoaded(true);
       }, 100); // 약간의 지연을 추가하여 자연스러운 fade-in
     }
+
+    if (!window.Kakao.isInitialized()) {
+      window.Kakao.init("4c6ee9bf93490c29dc7ea70a7d4b2eba");
+    }
+    
   }, [applicationFormIsLoading, coupleIsLoading, parentsIsLoading, directionsIsLoading]);
 
   return (
@@ -98,6 +131,7 @@ function App() {
             // )
           )
         }
+        <Share id='kakaotalk-sharing-btn' onClick={shareKakao}>공유하기</Share>
         <EndingImage src={endingImage} alt='ending' />
       </WeddingCard>
     </Container>

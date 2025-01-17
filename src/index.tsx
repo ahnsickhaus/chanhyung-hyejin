@@ -13,11 +13,10 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <QueryClientProvider client={queryClient}>
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Routes>
-          <Route path='/chanhyung-hyejin' element={<App />}></Route>
+          <Route path='/' element={<App />}></Route>
           <Route path='/card' element={<Card />}></Route>
-          <Route path='/chanhyung-hyejin/card' element={<Card />}></Route>
         </Routes>
     </BrowserRouter>
   </QueryClientProvider>
