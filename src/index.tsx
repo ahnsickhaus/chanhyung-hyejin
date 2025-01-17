@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import Card from './pages/Card';
 
 const queryClient = new QueryClient();
@@ -13,12 +13,12 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <QueryClientProvider client={queryClient}>
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter>
         <Routes>
           <Route path='/' element={<App />}></Route>
           <Route path='/card' element={<Card />}></Route>
         </Routes>
-    </BrowserRouter>
+    </HashRouter>
   </QueryClientProvider>
 );
 
