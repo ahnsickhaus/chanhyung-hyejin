@@ -46,8 +46,8 @@ const Gallery = ({ photos, targetRowHeight }: GalleryProps) => {
             </CloseButton>
             <StyledSwiper
               initialSlide={startIndex}
+              loop={true}
               navigation
-              pagination={{ clickable: true }}
               modules={[Navigation]}
               className="lightbox-swiper"
             >
@@ -82,6 +82,7 @@ const Overlay = styled.div`
 const LightboxContainer = styled.div`
   position: relative;
   width: 90%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -90,7 +91,6 @@ const LightboxContainer = styled.div`
 const Image = styled.img`
   max-width: 100%;
   max-height: 100%;
-  border-radius: 8px;
 `;
 
 const CloseButton = styled.button`
@@ -101,13 +101,19 @@ const CloseButton = styled.button`
   color: white;
   cursor: pointer;
   z-index: 1001;
-  top: -10%;
+  top: 5%;
   right: 0;
   opacity: 0.8;
 `;
 
 /* Swiper 스타일링 */
 const StyledSwiper = styled(Swiper)`
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .swiper-button-next,
   .swiper-button-prev {
     color: #fff;

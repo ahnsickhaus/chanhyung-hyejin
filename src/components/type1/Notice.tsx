@@ -17,10 +17,10 @@ export default function Notice({
   return (
     <Section>
       <div style={{height: '60px'}}></div>
-      <FadeInAnimation>
         <Title>NOTICE</Title>
-        <Text>{notice}</Text>
-      </FadeInAnimation>
+        <FadeInAnimation>
+          <Text>{notice}</Text>
+        </FadeInAnimation>
     </Section>
   );
 }
