@@ -4,7 +4,7 @@ import introImageUrl from '../../assets/images/intro.png';
 const ImageContainer = styled.div`
   width: 100%;
   line-height: 0;
-  height: 100dvh;
+  height: 100vh;
 
   img {
     width: 100%;
