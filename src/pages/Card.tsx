@@ -24,10 +24,16 @@ const Container = styled.div<{ $isLoaded: boolean }>`
 const WeddingCard = styled.div`
   position: absolute;
   top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
 `;
 
 const EndingImage = styled.img`
   width: 100%;
+  max-width: 500px;
+  display: block;
+  margin: 0 auto;
 `;
 
 const Share = styled.button`

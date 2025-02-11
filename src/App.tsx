@@ -36,7 +36,7 @@ function App() {
   return (
     <Container>
       <Intro>
-        <img style={{width: '100%', height: '100%'}} src={thumnailUrl} alt='mainImage' />
+        <img style={{width: '100%', height: '100%', maxWidth: '500px', margin: '0 auto', display: 'block'}} src={thumnailUrl} alt='mainImage' />
         <Open to="card">
           OPEN 💌
         </Open>

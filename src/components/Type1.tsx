@@ -18,6 +18,8 @@ const Type1Container = styled.div`
   line-height: 1.8;
   font-weight: 400;
   background-color: #FFFFFF; 
+  max-width: 500px;
+  margin: 0 auto;
 
   h2 {
     font-size: 18px;
