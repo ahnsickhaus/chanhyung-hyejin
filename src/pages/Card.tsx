@@ -24,9 +24,7 @@ const Container = styled.div<{ $isLoaded: boolean }>`
 const WeddingCard = styled.div`
   position: absolute;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
+  left: calc(50% - 250px)
 `;
 
 const EndingImage = styled.img`
